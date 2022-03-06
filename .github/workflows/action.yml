@@ -26,5 +26,7 @@ jobs:
         run: rsync -avzh . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/matrix
       - name: Stop Docker Container
         run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} docker-compose down
+      - name: Remove Provisioning
+        run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} rm -rf provisioning
       - name: Start Docker Container
         run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} docker-compose up -d
