@@ -64,6 +64,6 @@ services:
 
 volumes:
   grafana_data:
-    name: grafana_data
+    #name: grafana_data
   influx_data:
-    name: influx_data
+    #name: influx_data
