@@ -23,7 +23,7 @@ jobs:
       - name: Add known host
         run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
       - name: Copy project with rsync
-        run: rsync -avzh . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/opt/DevOps
+        run: rsync -avzh . ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/home/matrix
       - name: Stop Docker Container
         run: ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} docker-compose down
       - name: Start Docker Container
