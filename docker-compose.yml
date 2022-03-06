@@ -8,9 +8,7 @@ services:
     image: grafana/grafana
     user: '0' # don't do this pls
     volumes:
-      - /opt/DevOps/grafana/:/var/lib/grafana
-      - /opt/DevOps/settings/grafana.ini:/etc/grafana/grafana.ini
-      - /opt/DevOps/provisioning/:/etc/grafana/provisioning
+      - ./provisioning/datasources/datasource.yml:/etc/grafana/provisioning/datasources/datasource.yaml
     ports:
       - 3000:3000
     environment:
