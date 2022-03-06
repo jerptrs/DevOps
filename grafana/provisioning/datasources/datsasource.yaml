@@ -8,14 +8,14 @@ datasources:
     access: proxy
     database: site
     user: grafana
-    url: http://localhost:8086
+    url: http://95.216.209.237:8086
     jsonData:
       httpMode: GET
   - name: prometheusdata
     type: prometheus
     access: direct
     orgId: 1
-    url: http://localhost:9090
+    url: http://95.216.209.237:9090
     isDefault: true
     version: 1
     editable: false
