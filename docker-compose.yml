@@ -59,3 +59,8 @@ services:
       - 9090:9090
     volumes:
       - ./data/prometheus.yml:/etc/prometheus/prometheus.yml
+  
+networks:
+  default:
+    external:
+      name: matrix_default
