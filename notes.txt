@@ -1,0 +1,4 @@
+http://95.216.209.237:8080/ cAdvisor
+http://95.216.209.237:8086/ InfluxDB Endpoint
+http://95.216.209.237:8083/ InfluxDB Dashboard
+http://95.216.209.237:3000/ Grafana
